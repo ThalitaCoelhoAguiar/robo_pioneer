@@ -13,6 +13,7 @@ Author:
 
     Mario Andres  Pastrana Triana (mario.pastrana@ieee.org)
     Matheus de Sousa Luiz (luiz.matheus@aluno.unb.br)
+    Thalita Coelho Aguiar (222030324@aluno.unb.br)
     EVA/MARIA PROJECT - University of Brasilia-(FGA)
 
 
