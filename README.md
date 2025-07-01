@@ -57,5 +57,5 @@ if __name__ == "__main__":
 
     crb01.executar_movimento_L_com_primitivas(x, y, v)
 
-    Mario Andres  Pastrana Triana (mario.pastrana@ieee.org)
-   Thalita Coelho Aguiar (222030324@aluno.unb.br)
+Autores:
+Thalita Coelho Aguiar (222030324@aluno.unb.br)
