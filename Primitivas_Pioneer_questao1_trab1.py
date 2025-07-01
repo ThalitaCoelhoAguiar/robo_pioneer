@@ -201,7 +201,7 @@ class Pioneer():
             sim.simxSetJointTargetVelocity(clientID, motorE, 0, sim.simx_opmode_blocking)
             sim.simxSetJointTargetVelocity(clientID, motorD, 0, sim.simx_opmode_blocking)
 
-    def executar_movimento_L_com_primitivas(self, x, y, v_linear):
+    def executar_movimento_com_primitivas(self, x, y, v_linear):
         L = 0.381
         radio_ideal = 0.5
         self.v_linear = v_linear  
@@ -262,4 +262,4 @@ if __name__ == "__main__":
     y = 2    # deslocamento inicial no eixo Y
     v = 0.1      # velocidade linear (m/s)
 
-    crb01.executar_movimento_L_com_primitivas(x, y, v)
+    crb01.executar_movimento_com_primitivas(x, y, v)
