@@ -179,10 +179,10 @@ class Pioneer():
             if primitiva == 1:
                 omega = 0
             elif primitiva == 2:
-                radio_ideal = 0.5
+                radio_ideal = 0.45
                 omega = -self.v_linear / (-radio_ideal)  # curva à esquerda
             elif primitiva == 3:
-                radio_ideal = 0.5
+                radio_ideal = 0.45
                 omega = -self.v_linear / radio_ideal     # curva à direita
             else:
                 omega = 0
@@ -203,7 +203,7 @@ class Pioneer():
 
     def executar_movimento_com_primitivas(self, x, y, v_linear):
         L = 0.381
-        radio_ideal = 0.5
+        radio_ideal = 0.45
         self.v_linear = v_linear  
         
         # Posição inicial
@@ -216,8 +216,7 @@ class Pioneer():
             print(f"Andando {y}m no eixo Y")
             self.Robot_Pioneer_Primitivas(1, tempo_y)
                 
-            fator=1.04 #FATOR DE CORREÇÃO: 1.04 para as condiçoes coppelia e para v= 0.1m/s
-            tempo_giro = fator*(math.pi / 2) * (L / v_linear)
+            tempo_giro = (math.pi / 2) * (L / v_linear)
             print("Girando 90° para a direita")
             self.Robot_Pioneer_Primitivas(3, tempo_giro)  # primitiva 3: giro à direita
 
@@ -233,8 +232,7 @@ class Pioneer():
         
         elif y == 0 and x != 0:
             
-            fator=1.04 #FATOR DE CORREÇÃO: 1.04 para as condiçoes coppelia e para v= 0.1m/s
-            tempo_giro = fator*(math.pi / 2) * (L / v_linear)
+            tempo_giro = (math.pi / 2) * (L / v_linear)
             print("Girando 90° para a direita")
             self.Robot_Pioneer_Primitivas(3, tempo_giro)  # primitiva 3: giro à direita
 
@@ -242,8 +240,7 @@ class Pioneer():
             print(f"Andando {x}m no eixo X")
             self.Robot_Pioneer_Primitivas(1, tempo_x)
             
-            fator=1.04 #FATOR DE CORREÇÃO: 1.04 para as condiçoes coppelia e para v= 0.1m/s
-            tempo_giro = fator*(math.pi / 2) * (L / v_linear)
+            tempo_giro = (math.pi / 2) * (L / v_linear)
             print("Girando 90° para a direita")
             self.Robot_Pioneer_Primitivas(3, tempo_giro)  # primitiva 3: giro à direita
             
