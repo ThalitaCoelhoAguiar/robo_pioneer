@@ -11,12 +11,7 @@ Este repositório contém dois métodos distintos de controle para um robô móv
 
 ## 📁 Estrutura do Repositório
 
-graphql
-├── path_pioneer_M_questao2_trab1.py       # Controle com PID e waypoints
-├── Primitivas_Pioneer_questao1_trab1.py   # Controle com primitivas (reta + curva)
-├── Pioneer_experiment.csv                 # Dados de saída (posição do robô)
-└── README.md                              # Este arquivo
-
+<pre> ```plaintext ├── path_pioneer_M_questao2_trab1.py # Controle com PID e waypoints ├── Primitivas_Pioneer_questao1_trab1.py # Controle com primitivas (reta + curva) ├── Pioneer_experiment.csv # Dados de saída (posição do robô) └── README.md # Este arquivo ``` </pre>
 ## ⚙️ Requisitos
 
 - Python 3.x
