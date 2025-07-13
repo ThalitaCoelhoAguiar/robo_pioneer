@@ -84,11 +84,8 @@ Para a simulação:
 
 Em ambas as simulações utiliza-se robô com duas rodas, logo implementa-se o robô com a definição das rodas e a distância entre as rodas. Para que haja a moviementação foi definida a velocidade de cada uma das rodas evidenciadas a seguir:
 
-\begin{align*}
-v_R &= v + \frac{L}{2} \cdot \omega \\
-v_L &= v - \frac{L}{2} \cdot \omega
-\end{align*}
-
+v = (v_R + v_L) / 2  
+ω = (v_R - v_L) / L
 
 
 2) Uma visão geral de cada abordagem
@@ -108,6 +105,18 @@ Dessa forma, foram definidos 3 tipos de movimentos:
 
 Para a movimentação do robô para direita ou esquerda foi necessário também a definição do raio que o robo segue quando gira. O robô segue em linha reta no eixo y, e então, robô segue aproximada uma trajetoria de arco de 90 graus e segue para o próximo comando que é seguir reto no eixo X. O tempo de movimentação foi calculado sobre a distancia definida do main subtraida do raio da trajetória, uma vez que que no giro, o robo acrescenta um raio na trajeotria  tanto no eixo x como no y.
 
+As três movimentações implmentadas são evidenciadas a seguir:
+
+            if primitiva == 1:
+                omega = 0
+            elif primitiva == 2:
+                radio_ideal = 0.5
+                omega = -self.v_linear / (-radio_ideal)  # curva à esquerda
+            elif primitiva == 3:
+                radio_ideal = 0.5
+                omega = -self.v_linear / radio_ideal     # curva à direita
+            else:
+                omega = 0
 
 
 
