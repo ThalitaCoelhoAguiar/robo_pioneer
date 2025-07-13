@@ -9,9 +9,15 @@ Este repositório contém dois métodos distintos de controle para um robô móv
 - **demo1.py`**: Controle baseado em *waypoints* com orientação por PID.
 - **`demo2.py`**: Controle baseado em primitivas de movimento (reta e giro), usado para formar trajetórias como "L", "M", etc.
 
-## 📁 Estrutura do Repositório
+## 📂 Estrutura do Repositório
 
-<pre> ```plaintext ├── path_pioneer_M_questao2_trab1.py # Controle com PID e waypoints ├── Primitivas_Pioneer_questao1_trab1.py # Controle com primitivas (reta + curva) ├── Pioneer_experiment.csv # Dados de saída (posição do robô) └── README.md # Este arquivo ``` </pre>
+```plaintext
+├── path_pioneer_M_questao2_trab1.py       # Controle com PID e waypoints
+├── Primitivas_Pioneer_questao1_trab1.py   # Controle com primitivas (reta + curva)
+├── Pioneer_experiment.csv                 # Dados de saída (posição do robô)
+└── README.md                              # Este arquivo
+```
+
 ## ⚙️ Requisitos
 
 - Python 3.x
