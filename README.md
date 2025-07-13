@@ -6,7 +6,7 @@ Trabalho realizado pelas alunas Thalita Coelho Aguiar - 222030324 e Aline de Car
 ## 📂 Estrutura do Repositório
 Este repositório contém dois métodos distintos de controle para um robô móvel Pioneer no simulador **CoppeliaSim**, desenvolvidos no contexto do projeto EVA/MARIA da Universidade de Brasília (FGA):
 
-- **demo1.py`**: Controle baseado em *waypoints* com orientação por PID.
+- **`demo1.py`**: Controle baseado em *waypoints* com orientação por PID.
 - **`demo2.py`**: Controle baseado em primitivas de movimento (reta e giro), usado para formar trajetórias como "L", "M", etc.
 
 ## 📂 Estrutura do Repositório
