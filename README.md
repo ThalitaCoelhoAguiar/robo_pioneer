@@ -233,43 +233,11 @@ v = 0.1    # Velocidade linear (m/s)
 📚 Base Teórica
 Ambas as abordagens usam um robô diferencial com duas rodas. As velocidades das rodas determinam o comportamento do robô:
 
-𝑣
-=
-𝑣
-𝑅
-+
-𝑣
-𝐿
-2
-𝜔
-=
-𝑣
-𝑅
-−
-𝑣
-𝐿
-𝐿
-v= 
-2
-v 
-R
-​
- +v 
-L
-​
- 
-​
- ω= 
-L
-v 
-R
-​
- −v 
-L
-​
- 
-​
- 
+makefile
+Copiar
+Editar
+v = (v_R + v_L) / 2  
+ω = (v_R - v_L) / L
 🧪 Abordagens
 ✅ PID com Waypoints (path_Pioneer)
 O robô calcula a distância até o próximo ponto e ajusta a orientação com base no erro angular (phid):
@@ -298,9 +266,13 @@ Editar
 if primitiva == 1:
     omega = 0
 elif primitiva == 2:
+    radio_ideal = 0.5
     omega = -v_linear / -radio_ideal
 elif primitiva == 3:
+    radio_ideal = 0.5
     omega = -v_linear / radio_ideal
+else:
+    omega = 0
 O tempo de cada movimento é calculado com:
 
 python
@@ -309,10 +281,28 @@ Editar
 tempo_x = abs((x - radio_ideal) / v_linear)
 tempo_y = abs((y - radio_ideal) / v_linear)
 tempo_giro = (math.pi / 2) * (L / v_linear)
-Isso garante que o robô se alinhe corretamente após o giro de 90°.
+Na trajetória em linha reta, o tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória.
+Isso ocorre porque, ao realizar a curva, o robô se desloca horizontal e verticalmente pelo valor do raio, sendo necessário ajustar a distância reta restante para manter a precisão no trajeto.
 
+A movimentação do robô é baseada no tempo de execução. Para correlacionar com a distância informada, a seguinte relação foi utilizada:
+
+ini
+Copiar
+Editar
+tempo = distância / velocidade_linear
+Por fim, o movimento do robô é calculado de forma iterativa, até que o erro de orientação seja pequeno o suficiente:
+
+python
+Copiar
+Editar
+if lock_stop_simulation == 1 and error_phi <= 0.08:
+    a = 0
+    vl = 0
+    vd = 0
 🎯 Conclusão
 Este projeto demonstra diferentes estratégias de controle para um robô móvel, comparando controle por feedback (PID) e controle baseado em sequência de ações (primitivas). Ambas as abordagens permitem desenvolver habilidades importantes em robótica móvel, controle e simulação.
+
+
 
 
 
