@@ -28,16 +28,6 @@ Este repositório contém dois métodos distintos de controle para um robô móv
   - `math`
   - `csv`
  
-##  Como Usar
-
-### 1. Inicie o CoppeliaSim
-- Certifique-se de que o servidor remoto está ativo (porta padrão: `19999`).
-- Carregue uma cena com o robô **Pioneer_p3dx** (e opcionalmente a bola, se necessário).
-- Acione o Real-time(o relógio no Coppelia)
-
-### 2. Execute um dos scripts
-
----
 
 ### 🧪 Demo 1: Controle com Waypoints (PID)
 
