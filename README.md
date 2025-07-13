@@ -98,7 +98,7 @@ v = (v_R + v_L) / 2
 
 * O movimento do robô segue o ballPos, em que é calculado o erro entre a posição do robô e do ballPos evidenciado, a seguir:
 
-error_distance = math.sqrt((ballPos[1] - positiona[1]) ** 2 + (ballPos[0] - positiona[0]) ** 2)
+error_distance = math.sqrt((ballPos[1] - positiona[1]) ** 2 + (ballPos[0] - positiona[0]) ** 2))
 
 e se erro for menor do que o definido, há o ajuste do movimento do carro pelo phid, mostrado, a seguir:
 
