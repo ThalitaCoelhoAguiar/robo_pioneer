@@ -1,5 +1,5 @@
 # robo_pioneer
-Robótica
+Trabalho realizado pelas alunas Thalita Coelho Aguiar - 222030324 e Aline de Carvalho Rodrigues- 180096923
 
 # Controle de Robô Pioneer no CoppeliaSim
 
