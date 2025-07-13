@@ -140,7 +140,7 @@ Para que o robô execute curvas para a direita ou esquerda, foi necessário defi
 
 A movimentação do robô foi baseada no tempo de execução. Para correlacionar o tempo com a distância informada pelo usuário, adotou-se a relação: tempo = distancia / velocidade_linear, onde t é o tempo de execução, d é a distância desejada e 𝑣 é a velocidade linear do robô. Essa relação é implementada diretamente no código, conforme evidenciado na seguinte linha:
 
-tempo_x = abs((x - radio_ideal) / v_linear)
+tempo_x = abs((x - radio_ideal) / v_linear))
 tempo_y = abs((y - radio_ideal) / v_linear)
 tempo_giro = (math.pi / 2) * (L / v_linear)
 
