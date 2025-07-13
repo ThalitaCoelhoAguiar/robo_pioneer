@@ -93,33 +93,28 @@ v = (v_R + v_L) / 2
 Demo 2:
 
 2.1) Fazer com que o robô percorra uma sequência de dois ou mais pontos: "demo1.py".
+
 Foi utilizado como base o programa path_Pioneer.py
- A movimentação foi baseada na implementação do tempo que o robô cumpre cada um dos comandos.
-Para correlacionar com o input de distancia, definiu-se o tempo como t=Velocidade_linear*distância.
-evidenciado na linha do código:
-....
+
+A movimentação do robô foi baseada na execução sequencial dos comandos, a seguir:
+
 Dessa forma, foram definidos 3 tipos de movimentos:
 1_Seguir reto
 2_Girar para esquerda
 3_Girar para direita
 
-Para a movimentação do robô para direita ou esquerda foi necessário também a definição do raio que o robo segue quando gira. O robô segue em linha reta no eixo y, e então, robô segue aproximada uma trajetoria de arco de 90 graus e segue para o próximo comando que é seguir reto no eixo X. O tempo de movimentação foi calculado sobre a distancia definida do main subtraida do raio da trajetória, uma vez que que no giro, o robo acrescenta um raio na trajeotria  tanto no eixo x como no y.
+Para que o robô execute curvas para a direita ou esquerda, foi necessário definir o raio de giro correspondente à trajetória circular que ele percorre durante a rotação. Inicialmente, o robô se desloca em linha reta ao longo do eixo 𝑦 e, em seguida, realiza uma curva de aproximadamente
+90 ∘, descrevendo um arco de circunferência, até alinhar-se com o eixo x., com o tempo de execução definido para cada ação.
 
-As três movimentações implmentadas são evidenciadas a seguir:
+A movimentação do robê foi baseada no tempo de execução. Para correlacionar o tempo com a distância informada pelo usuário, adotou-se a relação: tempo = distancia / velocidade_linear, onde t é o tempo de execução, d é a distância desejada e 𝑣 é a velocidade linear do robô. Essa relação é implementada diretamente no código, conforme evidenciado na seguinte linha:
 
-            if primitiva == 1:
-                omega = 0
-            elif primitiva == 2:
-                radio_ideal = 0.5
-                omega = -self.v_linear / (-radio_ideal)  # curva à esquerda
-            elif primitiva == 3:
-                radio_ideal = 0.5
-                omega = -self.v_linear / radio_ideal     # curva à direita
-            else:
-                omega = 0
+tempo_x = abs((x - radio_ideal) / v_linear)
+tempo_y = abs((y - radio_ideal) / v_linear)
+tempo_giro = (math.pi / 2) * (L / v_linear)
 
+em que na trajetória em linha reta o tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória.
 
-
+O tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória. Isso ocorre porque, ao realizar a curva, o robô desloca-se horizontal e verticalmente pelo valor do raio, sendo necessário ajustar a distância reta restante para manter a precisão no trajeto.
 
 
 3) as equações em Latex utilizadas para explicar a modelagem do robô
