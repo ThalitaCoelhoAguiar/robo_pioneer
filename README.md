@@ -79,7 +79,8 @@ Em ambas as simulações utiliza-se robô com duas rodas, logo implementa-se o r
 v = (v_R + v_L) / 2  
 ω = (v_R - v_L) / L
 
-###  Demo 1
+---
+###  Demo 1 - Como Funciona
 
 *Fazer com que o robô percorra uma sequência de dois ou mais pontos: "demo1.py".
 
@@ -96,7 +97,10 @@ if error_distance >= self.Min_error_distance: ### Calculate the phid (see georgi
   controller_Linear = self.v_linear * error_distance
   lock_stop_simulation = 0
 
-2.2) Demo 2:
+---
+
+###  Demo 2 - Como funciona
+
 Fazer com que chegue à um ponto final utilizando uma seuência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo1.py".
 
 *Utilizando como base o programa "Primitivas_Pioneer.py"
