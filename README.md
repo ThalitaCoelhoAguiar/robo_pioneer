@@ -37,30 +37,48 @@ Este repositório contém dois métodos distintos de controle para um robô móv
 
 ### 2. Execute um dos scripts
 
-**Controle com Waypoints (PID):**
+---
+
+### 🧪 Demo 1: Controle com Waypoints (PID)
+
+Execute o script:
+
 ```bash
-python path_Pioneer.py
-Controle com Primitivas (reta + curva):
+python path_pioneer_M_questao2_trab1.py
+```
 
+Edite a lista de *waypoints* no código:
 
-No path_Pioneer.py, edite a lista:
-
+```python
 waypoints = [
     [-1.75, -0.75],
     [-0.9625, -1.4125],
     [-0.175, -0.75],
     [-0.175, -2.05],
 ]
+```
 
-No primitivas.py, você pode editar:
+---
 
+### 🧪 Demo 2: Controle com Primitivas de Movimento (reta + curva)
+
+Execute o script:
+
+```bash
+python Primitivas_Pioneer_questao1_trab1.py
+```
+
+Edite os parâmetros no `main`:
+
+```python
 if __name__ == "__main__":
     crb01 = Pioneer()
     x = 1.5      # deslocamento no eixo X (após o giro)
-    y = 2    # deslocamento inicial no eixo Y
+    y = 2        # deslocamento inicial no eixo Y
     v = 0.1      # velocidade linear (m/s)
 
     crb01.executar_movimento_L_com_primitivas(x, y, v)
+```
 
 ## 🧠 Visão Geral
 
