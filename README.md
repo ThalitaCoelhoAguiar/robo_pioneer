@@ -148,9 +148,9 @@ tempo_giro = (math.pi / 2) * (L / v_linear)
 em que na trajetória em linha reta, o tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória.
 Isso ocorre porque, ao realizar a curva, o robô desloca-se horizontal e verticalmente pelo valor do raio, sendo necessário ajustar a distância reta restante para manter a precisão no trajeto.
 
-O movimento do robô é calculado de forma iterativa de modo que possua um erro menor do que o implemenado, a seguir:
-
+O movimento do robô é é realizado com base na diferença angular (erro) entre a direção atual do robô e o alvo (waypoint). O sistema usa um controlador PID para ajustar a velocidade das rodas e alinhar o robô em direção ao ponto desejado. 
 ```python
+
 if lock_stop_simulation == 1 and error_phi <= 0.08:
             a = 0
             vl = 0
