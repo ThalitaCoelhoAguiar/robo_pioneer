@@ -86,11 +86,23 @@ v = (v_R + v_L) / 2
 
 * Foi utilizado como base o programa path_Pioneer.py
 
-* O movimento do robô segue o ballPos, em que é calculado o erro entre a posição do robô e do ballPos evidenciado, a seguir:
+* O movimento do robô segue o ballPos,
+  
+*  O movimento do robô é é realizado com base na diferença angular (erro) entre a direção atual do robô e o alvo (waypoint). O sistema usa um controlador PID para ajustar a velocidade das rodas e alinhar o robô em direção ao ponto desejado.  em que é calculado o erro entre a posição do robô e do ballPos evidenciado, a seguir:
 * 
 ```python
 error_distance = math.sqrt((ballPos[1] - positiona[1]) ** 2 + (ballPos[0] - positiona[0]) ** 2))
 ```
+
+O ângulo que o robô deve seguir para chegar ao próximo ponto é determinado por:
+
+```python
+phid = math.atan2(ballPos[1] - positiona[1], ballPos[0] - positiona[0])
+```
+Depois, o robô calcula a diferença entre a sua orientação atual (self.phi) e o ângulo desejado (phid), esse valor é usado como entrada no controle PID.
+ ```python
+ error_phi = phid - self.phi
+ ```
 e se erro for menor do que o definido, há o ajuste do movimento do carro pelo phid, mostrado, a seguir:
 
 
