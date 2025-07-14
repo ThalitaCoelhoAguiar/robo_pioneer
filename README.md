@@ -84,7 +84,7 @@ Também para ambos os casos, são definidos a velocidade linear e angular
 
  O ângulo de giro é calculado como:
 
- <img width="150" height="45" alt="image" src="https://github.com/user-attachments/assets/fb1f11c3-31ac-43e9-b409-90170a4c7944" />
+ <img width="200" height="45" alt="image" src="https://github.com/user-attachments/assets/fb1f11c3-31ac-43e9-b409-90170a4c7944" />
 
  e o erro calculado para o controle PID é:
 
@@ -128,16 +128,16 @@ if error_distance >= self.Min_error_distance: ### Calculate the phid (see georgi
 
 ###  Demo 2 - Como funciona
 
-Fazer com que chegue à um ponto final utilizando uma sequência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo2.py".
+* Fazer com que chegue à um ponto final utilizando uma sequência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo2.py".
 
-*Utilizando como base o programa "Primitivas_Pioneer.py"
+* Utilizando como base o programa "Primitivas_Pioneer.py"
 
-A movimentação do robô foi baseada na execução sequencial de comando primitivos, a seguir:
+* A movimentação do robô foi baseada na execução sequencial de comando primitivos, a seguir:
 
 Dessa forma, foram definidos 3 tipos de movimentos:
-1_Seguir reto
-2_Girar para esquerda
-3_Girar para direita
+* 1_Seguir reto
+* 2_Girar para esquerda
+* 3_Girar para direita
 
 A implementação dos 3 movimentos é evidenciada, a seguir:
 
@@ -158,10 +158,10 @@ else:
 
 ```
 
-Para que o robô execute curvas para a direita ou esquerda, foi necessário definir o raio de giro correspondente à trajetória circular que ele percorre durante a rotação. Inicialmente, o robô se desloca em linha reta ao longo do eixo 𝑦 e, em seguida, realiza uma curva de aproximadamente
+* Para que o robô execute curvas para a direita ou esquerda, foi necessário definir o raio de giro correspondente à trajetória circular que ele percorre durante a rotação. Inicialmente, o robô se desloca em linha reta ao longo do eixo 𝑦 e, em seguida, realiza uma curva de aproximadamente
 90 ∘, descrevendo um arco de circunferência, até alinhar-se com o eixo x., com o tempo de execução definido para cada ação.
 
-A movimentação do robô foi baseada no tempo de execução. Para correlacionar o tempo com a distância informada pelo usuário, adotou-se a relação: tempo = distancia / velocidade_linear, onde t é o tempo de execução, d é a distância desejada e 𝑣 é a velocidade linear do robô. Essa relação é implementada diretamente no código, conforme evidenciado na seguinte linha:
+* A movimentação do robô foi baseada no tempo de execução. Para correlacionar o tempo com a distância informada pelo usuário, adotou-se a relação: tempo = distancia / velocidade_linear, onde t é o tempo de execução, d é a distância desejada e 𝑣 é a velocidade linear do robô. Essa relação é implementada diretamente no código, conforme evidenciado na seguinte linha:
 
 ```python
 tempo_x = abs((x - radio_ideal) / v_linear))
@@ -172,14 +172,6 @@ tempo_giro = (math.pi / 2) * (L / v_linear)
 em que na trajetória em linha reta, o tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória.
 Isso ocorre porque, ao realizar a curva, o robô desloca-se horizontal e verticalmente pelo valor do raio, sendo necessário ajustar a distância reta restante para manter a precisão no trajeto.
 
-
-```python
-
-if lock_stop_simulation == 1 and error_phi <= 0.08:
-            a = 0
-            vl = 0
-            vd = 0
-```
 
 ## Conclusão
 Este projeto demonstra diferentes estratégias de controle para um robô móvel, comparando controle por feedback (PID) e controle baseado em sequência de ações (primitivas). Ambas as abordagens permitem desenvolver habilidades importantes em robótica móvel, controle e simulação.
