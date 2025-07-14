@@ -1,15 +1,15 @@
 # Trabalho 1
 Trabalho realizado pelas alunas Thalita Coelho Aguiar - 222030324 e Aline de Carvalho Rodrigues- 180096923
 
-# 🤖 Controle de Robô Pioneer no CoppeliaSim
+#  Controle de Robô Pioneer no CoppeliaSim
 
-## 📂 Estrutura do Repositório
+##  Estrutura do Repositório
 Este repositório contém dois métodos distintos de controle para um robô móvel Pioneer no simulador **CoppeliaSim**, desenvolvidos no contexto do projeto EVA/MARIA da Universidade de Brasília (FGA):
 
 - **`demo1.py`**: Controle baseado em *waypoints* com orientação por PID.
 - **`demo2.py`**: Controle baseado em primitivas de movimento (reta e giro), usado para formar trajetórias como "L", "M", etc.
 
-## 📂 Estrutura do Repositório
+##  Estrutura do Repositório
 
 ```plaintext
 ├── path_pioneer_M_questao2_trab1.py       # Controle com PID e waypoints
@@ -18,7 +18,7 @@ Este repositório contém dois métodos distintos de controle para um robô móv
 └── README.md                              # Este arquivo
 ```
 
-## ⚙️ Requisitos
+##  Requisitos
 
 - Python 3.x
 - [CoppeliaSim](https://www.coppeliarobotics.com/)
@@ -29,7 +29,7 @@ Este repositório contém dois métodos distintos de controle para um robô móv
   - `csv`
  
 
-### 🧪 Demo 1: Controle com Waypoints (PID)
+###  Demo 1: Controle com Waypoints (PID)
 
 Execute o script:
 
@@ -50,7 +50,7 @@ waypoints = [
 
 ---
 
-### 🧪 Demo 2: Controle com Primitivas de Movimento (reta + curva)
+###  Demo 2: Controle com Primitivas de Movimento (reta + curva)
 
 Execute o script:
 
@@ -70,11 +70,11 @@ if __name__ == "__main__":
     crb01.executar_movimento_L_com_primitivas(x, y, v)
 ```
 
-## 🧠 Visão Geral
+##  Visão Geral
  
 ## Base teórica Geral
 
-Em ambas as simulações utiliza-se robô com duas rodas, logo implementa-se o robô com a definição das rodas e a distância entre as rodas. Para que haja a moviementação foi definida a velocidade de cada uma das rodas evidenciadas a seguir:
+Em ambas as simulações, utilizam-se robô com duas rodas, logo implementa-se o robô com a definição das rodas e a distância entre as rodas. Para que haja a moviementação foi definida a velocidade de cada uma das rodas evidenciadas a seguir:
 
 v = (v_R + v_L) / 2  
 ω = (v_R - v_L) / L
