@@ -90,6 +90,7 @@ Também para ambos os casos, são definidos a velocidade linear e angular
 
  <img width="139" height="35" alt="Image" src="https://github.com/user-attachments/assets/7c93a464-ba6a-42ed-83b3-bc86317c8efe" />
 ---
+
 ###  Demo 1 - Como Funciona
 
 * Fazer com que o robô percorra uma sequência de dois ou mais pontos: "demo1.py".
