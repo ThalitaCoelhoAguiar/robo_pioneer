@@ -99,7 +99,7 @@ O ângulo que o robô deve seguir para chegar ao próximo ponto é determinado p
 ```python
 phid = math.atan2(ballPos[1] - positiona[1], ballPos[0] - positiona[0])
 ```
-Depois, o robô calcula a diferença entre a sua orientação atual (self.phi) e o ângulo desejado (phid), esse valor é usado como entrada no controle PID.
+Depois, o robô calcula a diferença entre a sua orientação atual  e o ângulo desejado, esse valor é usado como entrada no controle PID.
  ```python
  error_phi = phid - self.phi
  ```
