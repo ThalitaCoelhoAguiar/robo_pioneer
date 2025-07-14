@@ -84,11 +84,12 @@ Também para ambos os casos, são definidos a velocidade linear e angular
 
  O ângulo de giro é calculado como:
 
- <img width="310" height="45" alt="image" src="https://github.com/user-attachments/assets/fb1f11c3-31ac-43e9-b409-90170a4c7944" />
+ <img width="150" height="45" alt="image" src="https://github.com/user-attachments/assets/fb1f11c3-31ac-43e9-b409-90170a4c7944" />
 
  e o erro calculado para o controle PID é:
 
- <img width="139" height="35" alt="Image" src="https://github.com/user-attachments/assets/7c93a464-ba6a-42ed-83b3-bc86317c8efe" />
+<img width="139" height="35" alt="Image" src="https://github.com/user-attachments/assets/7c93a464-ba6a-42ed-83b3-bc86317c8efe" />
+
 ---
 
 ###  Demo 1 - Como Funciona
