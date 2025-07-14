@@ -82,14 +82,15 @@ v = (v_R + v_L) / 2
 ---
 ###  Demo 1 - Como Funciona
 
-*Fazer com que o robô percorra uma sequência de dois ou mais pontos: "demo1.py".
+* Fazer com que o robô percorra uma sequência de dois ou mais pontos: "demo1.py".
 
-*Foi utilizado como base o programa path_Pioneer.py
+* Foi utilizado como base o programa path_Pioneer.py
 
 * O movimento do robô segue o ballPos, em que é calculado o erro entre a posição do robô e do ballPos evidenciado, a seguir:
-
+* 
+```python
 error_distance = math.sqrt((ballPos[1] - positiona[1]) ** 2 + (ballPos[0] - positiona[0]) ** 2))
-
+```
 e se erro for menor do que o definido, há o ajuste do movimento do carro pelo phid, mostrado, a seguir:
 
 if error_distance >= self.Min_error_distance: ### Calculate the phid (see georgia tech course) ###
