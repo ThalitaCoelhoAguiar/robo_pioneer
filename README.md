@@ -76,9 +76,10 @@ if __name__ == "__main__":
 
 Em ambas as simulações, utilizam-se robô com duas rodas, logo implementa-se o robô com a definição das rodas e a distância entre as rodas. Para que haja a moviementação foi definida a velocidade de cada uma das rodas evidenciadas a seguir:
 
+```plaintext
 v = (v_R + v_L) / 2  
 ω = (v_R - v_L) / L
-
+```
 ---
 ###  Demo 1 - Como Funciona
 
