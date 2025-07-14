@@ -116,11 +116,11 @@ if error_distance >= self.Min_error_distance: ### Calculate the phid (see georgi
 
 ###  Demo 2 - Como funciona
 
-Fazer com que chegue à um ponto final utilizando uma seuência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo1.py".
+Fazer com que chegue à um ponto final utilizando uma seuência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo2.py".
 
 *Utilizando como base o programa "Primitivas_Pioneer.py"
 
-A movimentação do robô foi baseada na execução sequencial dos comandos, a seguir:
+A movimentação do robô foi baseada na execução sequencial de comando primitivos, a seguir:
 
 Dessa forma, foram definidos 3 tipos de movimentos:
 1_Seguir reto
@@ -160,7 +160,7 @@ tempo_giro = (math.pi / 2) * (L / v_linear)
 em que na trajetória em linha reta, o tempo de giro foi calculado com base na distância programada no main, subtraída do raio da trajetória.
 Isso ocorre porque, ao realizar a curva, o robô desloca-se horizontal e verticalmente pelo valor do raio, sendo necessário ajustar a distância reta restante para manter a precisão no trajeto.
 
-O movimento do robô é é realizado com base na diferença angular (erro) entre a direção atual do robô e o alvo (waypoint). O sistema usa um controlador PID para ajustar a velocidade das rodas e alinhar o robô em direção ao ponto desejado. 
+
 ```python
 
 if lock_stop_simulation == 1 and error_phi <= 0.08:
