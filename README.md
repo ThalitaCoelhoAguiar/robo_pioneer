@@ -80,6 +80,7 @@ Em ambas as simulações, utilizam-se robô com duas rodas, logo implementa-se o
 v = (v_R + v_L) / 2  
 ω = (v_R - v_L) / L
 ```
+
 ---
 ###  Demo 1 - Como Funciona
 
