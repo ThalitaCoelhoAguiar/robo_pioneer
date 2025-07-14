@@ -72,13 +72,23 @@ if __name__ == "__main__":
 
 ##  Visão Geral
  
-## Base teórica Geral
+## Base teórica
 
 Em ambas as simulações, utilizam-se robô com duas rodas, logo implementa-se o robô com a definição das rodas e a distância entre as rodas. Para que haja a moviementação foi definida a velocidade de cada uma das rodas evidenciadas a seguir:
 
-<img width="160" height="145" alt="Image" src="https://github.com/user-attachments/assets/d6d90722-7c79-49d0-bfdc-d0fa3159d4ca" />
+<img width="150" height="145" alt="Image" src="https://github.com/user-attachments/assets/d6d90722-7c79-49d0-bfdc-d0fa3159d4ca" />
 
+Também para ambos os casos, são definidos a velocidade linear e angular
 
+<img width="150" height="137" alt="Image" src="https://github.com/user-attachments/assets/f7e59fda-58f1-4c12-89cc-266b3e561acd" />
+
+ O ângulo de giro é calculado como:
+
+ <img width="310" height="45" alt="image" src="https://github.com/user-attachments/assets/fb1f11c3-31ac-43e9-b409-90170a4c7944" />
+
+ e o erro calculado para o controle PID é:
+
+ <img width="139" height="35" alt="Image" src="https://github.com/user-attachments/assets/7c93a464-ba6a-42ed-83b3-bc86317c8efe" />
 ---
 ###  Demo 1 - Como Funciona
 
