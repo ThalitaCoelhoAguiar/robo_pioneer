@@ -128,7 +128,7 @@ if error_distance >= self.Min_error_distance: ### Calculate the phid (see georgi
 
 ###  Demo 2 - Como funciona
 
-Fazer com que chegue à um ponto final utilizando uma seuência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo2.py".
+Fazer com que chegue à um ponto final utilizando uma sequência de primitivas de movimento: andar à frente uma distância "a", curva 90 graus à direita com raio "a", curva 90 graus à esquerda com raio "a".: "demo2.py".
 
 *Utilizando como base o programa "Primitivas_Pioneer.py"
 
